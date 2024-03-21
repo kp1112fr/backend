@@ -17,6 +17,7 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationService authenticationService;
 
+    //for registering a new user
     @PostMapping("/register")
     public User register(@Valid @RequestBody UserDto user) {
         if (user.getEmail() == null || user.getEmail().isEmpty() || user.getPassword() == null || user.getPassword().isEmpty()) {
